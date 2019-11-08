@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LLNetworking_Example' do
+  pod 'LLNetworking', :path => '../'
+
+  target 'LLNetworking_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end

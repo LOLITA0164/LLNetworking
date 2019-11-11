@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0027980D8CD1ADC25599D0AA /* Pods-LLNetworking_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLNetworking_Tests.debug.xcconfig"; path = "Target Support Files/Pods-LLNetworking_Tests/Pods-LLNetworking_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		281EE2057D0A6D80C38D175B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		281EE2057D0A6D80C38D175B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		2E1921750710C1430834AA5A /* Pods-LLNetworking_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLNetworking_Example.debug.xcconfig"; path = "Target Support Files/Pods-LLNetworking_Example/Pods-LLNetworking_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3E98EE28D25DB8479DE388A5 /* Pods-LLNetworking_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LLNetworking_Tests.release.xcconfig"; path = "Target Support Files/Pods-LLNetworking_Tests/Pods-LLNetworking_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		561E04BC8A0281381736A0D5 /* Pods_LLNetworking_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLNetworking_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +65,8 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D33DA1247B29C3349C6BCD2C /* Pods_LLNetworking_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LLNetworking_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B5AFBA2884EFD2EABBB300 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		FA1391201503C82128C9E8EF /* LLNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = LLNetworking.podspec; path = ../LLNetworking.podspec; sourceTree = "<group>"; };
+		D5B5AFBA2884EFD2EABBB300 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FA1391201503C82128C9E8EF /* LLNetworking.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LLNetworking.podspec; path = ../LLNetworking.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				0027980D8CD1ADC25599D0AA /* Pods-LLNetworking_Tests.debug.xcconfig */,
 				3E98EE28D25DB8479DE388A5 /* Pods-LLNetworking_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,7 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
-				8A16919B51EC58D019051DCA /* [CP] Embed Pods Frameworks */,
+				0D5C4095F29947EA8B4F97AA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +248,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = LOLITA0164;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 96KT2V2ANX;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -259,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -296,6 +299,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D5C4095F29947EA8B4F97AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LLNetworking_Example/Pods-LLNetworking_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/LLNetworking/LLNetworking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLNetworking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLNetworking_Example/Pods-LLNetworking_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5E9D2F8DC56F60F6B5B75BA2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -334,24 +357,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLNetworking_Tests/Pods-LLNetworking_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A16919B51EC58D019051DCA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LLNetworking_Example/Pods-LLNetworking_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/LLNetworking/LLNetworking.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LLNetworking.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LLNetworking_Example/Pods-LLNetworking_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8A769263BDA8197E712CF22 /* [CP] Check Pods Manifest.lock */ = {
@@ -513,6 +518,7 @@
 			baseConfigurationReference = 2E1921750710C1430834AA5A /* Pods-LLNetworking_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 96KT2V2ANX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LLNetworking/LLNetworking-Prefix.pch";
 				INFOPLIST_FILE = "LLNetworking/LLNetworking-Info.plist";
@@ -529,6 +535,7 @@
 			baseConfigurationReference = 5A67EAB97078E29F0785D76E /* Pods-LLNetworking_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 96KT2V2ANX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LLNetworking/LLNetworking-Prefix.pch";
 				INFOPLIST_FILE = "LLNetworking/LLNetworking-Info.plist";

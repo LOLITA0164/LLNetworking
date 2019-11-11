@@ -7,6 +7,7 @@
 //
 
 #import "LLViewController.h"
+#import <LLNetworking/LLNetworking.h>
 
 @interface LLViewController ()
 
@@ -17,7 +18,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+}
+
+-(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    LLNetworking * networking = LLNetworking.new;
+    [networking POSTWithURLString:@"www.baidu.com" parameters:nil success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(id error) {
+        NSLog(@"%@",error);
+    }];
+    [networking doSomething];
 }
 
 - (void)didReceiveMemoryWarning

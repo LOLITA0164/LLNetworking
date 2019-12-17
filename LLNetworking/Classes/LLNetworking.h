@@ -8,9 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
+
+
 @interface LLNetworking : NSObject
-@property(strong,nonatomic)NSURLSessionDataTask *task;
-- (NSURLSessionDataTask *)POSTWithURLString:(NSString *)URLString parameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^)(id error))failure;
--(void)doSomething;
+@property(strong ,nonatomic) NSURLSessionDataTask *myTask;
+
+#pragma mark - 数据请求
+-(void)POST:(NSString*)urlString parameters:(id)parameters success:(void (^)(NSDictionary* responseObject))success failure:(void (^)(NSError* error))failure;
+-(void)GET:(NSString*)urlString parameters:(id)parameters success:(void (^)(NSDictionary* responseObject))success failure:(void (^)(NSError* error))failure;
+
+#pragma mark - 上传图片或者视频
+-(void)upload:(NSString *)URLString parameters:(id)parameters images:(NSArray*)imgsArray videos:(NSArray*)videosArray uploadProgress:(void(^)(NSProgress * uploadPro))uploadPro success:(void (^)(NSDictionary* responseObject))success failure:(void (^)(NSError* error))failure;
+
+#pragma mark - 取消网络任务
+-(void)cancelRequest;
+
 @end
 

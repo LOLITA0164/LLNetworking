@@ -1,7 +1,7 @@
 {
   "name": "LLNetworking",
   "version": "0.1.0",
-  "summary": "A short description of LLNetworking.",
+  "summary": "个人网络请求封装.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/LOLITA0164/LLNetworking",
   "license": {
@@ -21,7 +21,7 @@
   "source_files": "LLNetworking/Classes/**/*",
   "dependencies": {
     "AFNetworking": [
-      "~> 2.3"
+      "~> 3.2.1"
     ]
   }
 }
